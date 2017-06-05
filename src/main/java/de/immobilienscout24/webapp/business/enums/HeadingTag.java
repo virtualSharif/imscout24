@@ -1,0 +1,16 @@
+package de.immobilienscout24.webapp.business.enums;
+
+import lombok.Getter;
+
+@Getter
+public enum HeadingTag {
+
+	H1("h1"), H2("h2"), H3("h3"), H4("h4"), H5("h5"), H6("h6");
+
+	private String headingTagName;
+
+	private HeadingTag(String headingTagName) {
+		this.headingTagName = headingTagName;
+	}
+
+}

@@ -1,0 +1,159 @@
+<div>
+	<div class="row">
+		<div class="col-md-12">
+			<h3>Welcome to HTML Web Page Analyzer</h3>
+			<h5>The objective of this web application is to allow user to
+				conduct some analysis of an HTML web page.</h5>
+		</div>
+	</div>
+	<br />
+	<div class="row">
+		<form>
+			<div class="col-md-8">
+				<input type="url" ng-model="inputUrl" class="form-control" autofocus
+					required>
+			</div>
+			<div class="col-md-2">
+				<button class="btn btn-primary form-control"
+					ng-click="analyse(inputUrl)">Analyze</button>
+			</div>
+		</form>
+		<div class="col-md-2">
+			<button class="btn btn-default form-control" ng-click="clear()">Clear</button>
+		</div>
+	</div>
+</div>
+<hr />
+<div ng-show="data">
+	<div class="row">
+		<div class="col-md-12">
+			<div class="panel panel-primary">
+				<div class="panel-heading">HTML Web Page Analyzer details</div>
+				<div class="panel-body">
+					<table class="table table-stripped table-hover">
+						<thead>
+							<tr>
+								<th class="col-md-3">HTML page version</th>
+								<th class="col-md-3">Page title</th>
+								<th class="col-md-2">Internal links</th>
+								<th class="col-md-2">External Links</th>
+								<th class="col-md-2 text-center">Login Form</th>
+							</tr>
+						</thead>
+						<tr>
+						<tbody>
+							<tr>
+								<td class="col-md-3">{{data.htmlVersion}}</td>
+								<td class="col-md-3">{{data.pageTitle}}</td>
+								<td class="col-md-2">{{data.noOfInternalLinks}}</td>
+								<td class="col-md-2">{{data.noOfExternalLinks}}</td>
+								<td class="col-md-2 text-center"><span
+									class="label label-success" ng-if="data.loginForm">Present</span>
+									<span class="label label-default" ng-if="!data.loginForm">Absent</span>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</div>
+		</div>
+	</div>
+	<br />
+	<div class="row">
+		<div class="col-md-12">
+			<div class="panel panel-primary">
+				<div class="panel-heading">Heading Tag details</div>
+				<div class="panel-body">
+					<table class="table table-stripped table-hover">
+						<thead>
+							<tr>
+								<td class="col-md-1">#</td>
+								<th class="col-md-5 text-center">Heading tag</th>
+								<th class="col-md-6 text-center">No. of Occurance</th>
+							</tr>
+						</thead>
+						<tr>
+						<tbody>
+							<tr ng-repeat="headingTag in data.headingTagDTOs">
+								<td class="col-md-1">{{$index + 1}}</td>
+								<td class="col-md-5 text-center">{{headingTag.headingTag}}</td>
+								<td class="col-md-6 text-center">{{headingTag.noOfOccurance}}</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</div>
+		</div>
+	</div>
+	<br />
+	<div class="row">
+		<div class="col-md-12">
+			<div class="panel panel-primary">
+				<div class="panel-heading">
+					External link details <span class="label label-default">{{data.externalLinkDTOs.length}}</span>
+				</div>
+				<div class="panel-body">
+					<span ng-if="data.externalLinkDTOs.length  <= 0">No Links</span>
+					<div ng-if="data.externalLinkDTOs.length > 0">
+						<table class="table table-stripped table-hover">
+							<thead>
+								<tr>
+									<th class="col-md-1 ">#</th>
+									<th class="col-md-7 ">External Link</th>
+									<th class="col-md-4 text-center">Status</th>
+								</tr>
+							</thead>
+							<tr>
+							<tbody>
+								<tr ng-repeat="externalLink in data.externalLinkDTOs">
+									<td class="col-md-1">{{$index + 1}}</td>
+									<td class="col-md-8">{{externalLink.url}}</td>
+									<td class="col-md-4 text-center"
+										ng-if="externalLink.statusDTO !== null">
+										{{externalLink.statusDTO.code}} :
+										{{externalLink.statusDTO.message}}</td>
+									<td class="col-md-4 text-center"
+										ng-if="externalLink.statusDTO === null">
+										<button class="btn btn-xs btn-primary"
+											ng-click="validate(externalLink)">Validate</button>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<br />
+	<div class="row">
+		<div class="col-md-12">
+			<div class="panel panel-primary">
+				<div class="panel-heading">
+					Internal link details <span class="label label-default">{{data.internalLinkDTOs.length}}</span>
+				</div>
+				<div class="panel-body">
+					<span ng-if="data.internalLinkDTOs.length <= 0">No Links</span>
+					<div ng-if="data.internalLinkDTOs.length > 0">
+						<table class="table table-stripped table-hover">
+							<thead>
+								<tr>
+									<th class="col-md-1">#</th>
+									<th class="col-md-11">Internal Link</th>
+								</tr>
+							</thead>
+							<tr>
+							<tbody>
+								<tr ng-repeat="internalLink in data.internalLinkDTOs">
+									<td class="col-md-1">{{$index + 1}}</td>
+									<td class="col-md-11">{{internalLink.url}}</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
