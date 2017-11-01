@@ -1,11 +1,7 @@
 package de.immobilienscout24.webapp.business.dto;
 
 import de.immobilienscout24.webapp.business.enums.ErrorCodes;
-import lombok.AllArgsConstructor;
-import lombok.Data;
 
-@Data
-@AllArgsConstructor
 public class StatusDTO {
 
 	private Integer code;
@@ -14,5 +10,26 @@ public class StatusDTO {
 	public StatusDTO(ErrorCodes errorCodes) {
 		this.code = errorCodes.getCode();
 		this.message = errorCodes.getMessage();
+	}
+
+	public Integer getCode() {
+		return code;
+	}
+
+	public void setCode(Integer code) {
+		this.code = code;
+	}
+
+	public String getMessage() {
+		return message;
+	}
+
+	public void setMessage(String message) {
+		this.message = message;
+	}
+
+	public StatusDTO(Integer code, String message) {
+		this.code = code;
+		this.message = message;
 	}
 }

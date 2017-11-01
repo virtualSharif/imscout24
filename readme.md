@@ -1,11 +1,11 @@
-#Documentation
+# Documentation
 	Project name : HTML web page analyzer
 	Days took to build : Approximately 2days.
 ------------------------------------------------------------------------------------------------------------------------
-##Steps to run the project:
+## Steps to run the project:
 	Please refer run-readme.md file.
 ------------------------------------------------------------------------------------------------------------------------
-##Project Modules :
+## Project Modules :
 	This project consists of two major parts :
 	a. Backend - RESTful apis build in Java Spring framework.
 	b. Front-end - Single Page Application using Angular JS 1.x.
@@ -14,32 +14,32 @@
 ##Project architectural points:
 	Points regarding the development phase:
 
-#####i. Modularise :
+##### i. Modularise :
 	For the time being I have modularise the project on package level.
 	Later we can also modularise in maven modules.
 
 ------------------------------------------------------------------------------------------------------------------------
-#####ii. DTO :
+##### ii. DTO :
 	It stands for Data Transfer Object.
 	In this project DTO are used to send as response object from rest controller.
 
 ------------------------------------------------------------------------------------------------------------------------
-#####iii. RESTful API design :
+##### iii. RESTful API design :
 	Backend consists following restful apis i.e.
 
 	a. /api/v1/urls/analysis - used for analysis of html page
 	b. /api/v1/urls/statuses - used for external link(any) validation status.
 
 ------------------------------------------------------------------------------------------------------------------------
-#####iv. Exception Handler via Aspect :
+##### iv. Exception Handler via Aspect :
 	Added aspect for exception handling at rest layer and send appropriate http status and error messages.
 
 ------------------------------------------------------------------------------------------------------------------------
-#####v. Plugins used :
+##### v. Plugins used :
 	Lombok : https://projectlombok.org/
 
 ------------------------------------------------------------------------------------------------------------------------
-#####vi. Unit tests:
+##### vi. Unit tests:
 	Unit test written using spring boot test context and only exception thrown use cases.
 
 ------------------------------------------------------------------------------------------------------------------------
@@ -48,17 +48,17 @@
 	Where I am sending “HTML 5" if there is no public id in the doctype else entire public id of doctype.
 
 ------------------------------------------------------------------------------------------------------------------------
-#####viii. Front-end :
+##### viii. Front-end :
 	Single page application : Used Angular Js 1.x version.
 	For the time being everything is displayed on one page i.e. analyser page.
 
 ------------------------------------------------------------------------------------------------------------------------
-#####ix. Testing and documentation for RESTful apis:
+##### ix. Testing and documentation for RESTful apis:
 	Swagger : http://swagger.io/
 	I’ve added swagger framework for testing the apis.
 
 ------------------------------------------------------------------------------------------------------------------------
-#####x. Comments :
+##### x. Comments :
 	Entire code styling is influenced by Clean Code principle - Robert Martin
 	Which says
 	'Truth can only be found in one place: the code’.
@@ -68,7 +68,7 @@
 	However, if you need comments on each file. I can do that too.
 
 ------------------------------------------------------------------------------------------------------------------------
-#####xi. Design principles used in Project :
+##### xi. Design principles used in Project :
 	a. SOLID (single responsibility, open-closed, Liskov subsitution, interface segragation, dependency inversion) principle,
 	b. Composition over inheritance,
 	c. DRY(Don’t repeat yourself),
@@ -77,7 +77,7 @@
 	f. and some experience principle ;)
 
 ------------------------------------------------------------------------------------------------------------------------
-#####xii. Area of improvements :
+##### xii. Area of improvements :
 	a. Test cases:
 	I have written only exception thrown test case we can also write the positive test cases in future.
 
