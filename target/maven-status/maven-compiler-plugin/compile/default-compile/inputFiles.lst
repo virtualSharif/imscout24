@@ -1,0 +1,16 @@
+/Users/sharifur.malik/Documents/temp/imscout24/src/main/java/de/immobilienscout24/webapp/business/enums/ErrorCodes.java
+/Users/sharifur.malik/Documents/temp/imscout24/src/main/java/de/immobilienscout24/webapp/rest/exception/RestResponseEntityExceptionHandler.java
+/Users/sharifur.malik/Documents/temp/imscout24/src/main/java/de/immobilienscout24/webapp/business/enums/HeadingTag.java
+/Users/sharifur.malik/Documents/temp/imscout24/src/main/java/de/immobilienscout24/webapp/business/dto/UrlAnalysisDTO.java
+/Users/sharifur.malik/Documents/temp/imscout24/src/main/java/de/immobilienscout24/webapp/business/dto/HeadingTagDTO.java
+/Users/sharifur.malik/Documents/temp/imscout24/src/main/java/de/immobilienscout24/webapp/WebApplication.java
+/Users/sharifur.malik/Documents/temp/imscout24/src/main/java/de/immobilienscout24/webapp/business/constants/Constants.java
+/Users/sharifur.malik/Documents/temp/imscout24/src/main/java/de/immobilienscout24/webapp/business/service/UrlService.java
+/Users/sharifur.malik/Documents/temp/imscout24/src/main/java/de/immobilienscout24/webapp/rest/controller/UrlController.java
+/Users/sharifur.malik/Documents/temp/imscout24/src/main/java/de/immobilienscout24/webapp/business/dto/StatusDTO.java
+/Users/sharifur.malik/Documents/temp/imscout24/src/main/java/de/immobilienscout24/webapp/business/dto/UrlStatusDTO.java
+/Users/sharifur.malik/Documents/temp/imscout24/src/main/java/de/immobilienscout24/webapp/business/service/impl/UrlServiceImpl.java
+/Users/sharifur.malik/Documents/temp/imscout24/src/main/java/de/immobilienscout24/webapp/config/WebConfig.java
+/Users/sharifur.malik/Documents/temp/imscout24/src/main/java/de/immobilienscout24/webapp/config/SwaggerConfig.java
+/Users/sharifur.malik/Documents/temp/imscout24/src/main/java/de/immobilienscout24/webapp/rest/controller/HelloController.java
+/Users/sharifur.malik/Documents/temp/imscout24/src/main/java/de/immobilienscout24/webapp/rest/exception/BadRequestException.java
