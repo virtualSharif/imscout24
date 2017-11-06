@@ -23,7 +23,7 @@ public class UrlServiceTest {
 	@Autowired
 	private UrlService urlService;
 
-	private final String unreachableUrl = "http://www.qwertytesturl.com";
+	private final String unreachableUrl = "http://www.google.com";
 	private final String blankUrl = "";
 
 	@Test
